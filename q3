@@ -1,0 +1,47 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("QUESTION #3 ANSWERS\n");
+        CircularQueue CQ=new CircularQueue(3);
+        CQ.enqueue(1);
+        CQ.enqueue(2);
+        CQ.enqueue(3);
+        CQ.dequeue();
+        CQ.enqueue(4);
+        CQ.front();
+
+    }
+    public static class CircularQueue{
+        private int length;
+        private  int[] array;
+        public CircularQueue(int size){
+            array=new int[size];
+            length=0;
+        }
+        public void enqueue(int value){
+
+            array[length]=value;
+            length++;
+            //return array[length];
+        }
+        public void dequeue(){
+                int item;
+                length--;
+                item= array[0];
+            System.out.println(item);
+
+        }
+        public void front() {
+            for (int i = 0; i < length; i++) {
+            }
+            System.out.println(array[0]);
+        }
+        public void rear() {
+            for (int i = 0; i < length; i++) {
+            }
+            System.out.println(array[length-1]);
+        }
+
+    }
+}
